@@ -1,0 +1,16 @@
+<ion-content [fullscreen]="true" [style.visibility]="conten_visibilit" >
+  <ion-slides  [options]="slideOpt">
+    <ion-slide>
+      <ion-button
+        expand="full"
+        fill="outline"
+        shape="round"
+        size="large"
+        (click)="startScan()"
+      >
+       Escanear
+      </ion-button>
+    </ion-slide>
+  </ion-slides>
+  <label>Aqui va el resultado: {{respuesta}}</label>
+</ion-content>

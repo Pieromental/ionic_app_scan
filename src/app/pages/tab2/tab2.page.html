@@ -1,0 +1,25 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      Historial
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="enviarCorreo()" color="primary">
+        <ion-icon slot="icon-only" name="send"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item  detail *ngFor="let registro of dataLocal.guardados" (click)="abrirRegistro(registro)">
+      <ion-icon color="primary" slot="start" [name]="registro.icon"></ion-icon>
+      <ion-row>
+        <ion-col size="12">{{registro.text}}</ion-col>
+        <ion-col size="12">{{registro.created|date:'medium'}}</ion-col>   
+      </ion-row>
+    </ion-item>
+  </ion-list>
+</ion-content>
